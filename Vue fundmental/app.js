@@ -14,6 +14,9 @@ methods:{
     }
     ,decrement(){
         this.age--
+    },
+    printHello(){
+        console.log("aaa")
     }
 }})
 .mount('#app')
