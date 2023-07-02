@@ -107,6 +107,10 @@
 </template>
 
 <script>
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+
+const auth = getAuth();
+
 export default {
   name: "RegisterForm",
   data() {
@@ -140,6 +144,18 @@ export default {
       this.reg_alert_variant = "bg-green-500";
       this.reg_alert_msg = "Success! Your account has been created.";
       console.log(values);
+      createUserWithEmailAndPassword(auth, values.email, values.password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    console.log(user)
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // ..
+  });
     },
   },
 };
