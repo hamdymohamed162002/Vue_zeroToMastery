@@ -1,6 +1,7 @@
 # music
 
-This template should help get you started developing with Vue 3 in Vite.
+This template should help get you started developing with Vue 3 in Vite.\
+this app contains an validation and firebase authintication and pinia state managment 
 
 ## Recommended IDE Setup
 
