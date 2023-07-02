@@ -108,8 +108,8 @@
 
 <script>
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-
-const auth = getAuth();
+import app from "@/plugins/firebase";
+const auth = getAuth(app);
 
 export default {
   name: "RegisterForm",
